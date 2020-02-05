@@ -5,7 +5,8 @@ if [ ! -f $1 ]; then
   exit 1
 fi
 
-TMP=$(cat $1 | sed -e 's|\>|🤔🤔🤔/|g')
+TMP=$(cat $1 | tr -d '\n' | tr -d '\r')
+TMP=$(echo $TMP | sed -e 's|\>|🤔🤔🤔/|g')
 TMP=$(echo $TMP | sed -e 's|\<|🤔🤔🤔🤔/|g')
 TMP=$(echo $TMP | sed -e 's|\+|🤔/|g')
 TMP=$(echo $TMP | sed -e 's|\-|🤔🤔/|g')
