@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+
+require 'r-fxxk'
+
+class ThinkingFace < Brainfuck
+  nxt "🤔🤔🤔\n"           # >
+  prv "🤔🤔🤔🤔\n"         # <
+  inc "🤔\n"               # +
+  dec "🤔🤔\n"             # -
+  put "🤔🤔🤔🤔🤔\n"       # .
+  get "🤔🤔🤔🤔🤔🤔\n"     # ,
+  opn "🤔🤔🤔🤔🤔🤔🤔\n"   # [
+  cls "🤔🤔🤔🤔🤔🤔🤔🤔\n" # ]
+end
+
+puts ThinkingFace.new.fuck(ARGF.read).force_encoding("UTF-8")
